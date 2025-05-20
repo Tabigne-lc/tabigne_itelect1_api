@@ -17,7 +17,7 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Mobile and Gadgets',
+                'name' => 'Body Wash',
                 'image_path' => 'categories/mobile_and_gadgets.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),

@@ -13,11 +13,11 @@ class CategorySeeder2 extends Seeder
     public function run(): void
     {
          $categories = [
-            'Electronics',
-            'Home Appliances',
-            'Gaming',
-            'Fashion',
-            'Books',
+            'Lotion',
+            'Essential Oils',
+            'Facial Wash',
+            'Shampoo',
+            'Cosmetics',
         ];
 
         foreach ($categories as $categoryName) {
