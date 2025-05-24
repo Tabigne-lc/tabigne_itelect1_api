@@ -17,3 +17,4 @@ Route::get('categories', [CategoryController::class, 'index']);
 
 
 Route::post('/auth/login', [AuthController::class, 'login']);
+Route::post('/auth/logout', [AuthController::class, 'logout']);

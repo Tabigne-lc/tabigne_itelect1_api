@@ -55,18 +55,11 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        // Try to find as a product first
-        $product = Product::find($id);
-        if ($product) {
-            return response()->json($product, 200);
-        }
-
-        // If not found as a product, try as a user_id
+        // Always treat {id} as user_id and return all products for that user
         $userProducts = Product::where('user_id', $id)->get();
         if ($userProducts->count() > 0) {
             return response()->json(['data' => $userProducts], 200);
         }
-
         return response()->json(['message' => 'Product(s) not found'], 404);
     }
 
