@@ -15,8 +15,6 @@ class CategorySeeder2 extends Seeder
          $categories = [
             'Lotion',
             'Essential Oils',
-            'Facial Wash',
-            'Shampoo',
             'Cosmetics',
         ];
 
