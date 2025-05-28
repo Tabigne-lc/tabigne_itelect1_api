@@ -35,10 +35,6 @@ class AuthController extends Controller
         if (!$user) {
             return response()->json(['message' => 'Not authenticated'], 401);
         }
-        // If using Laravel Sanctum or Passport, revoke the token
-        if (method_exists($user, 'tokens')) {
-            $user->tokens()->delete();
-        }
         // If using session-based auth
         Auth::logout();
         $request->session()->invalidate();
